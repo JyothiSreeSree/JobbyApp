@@ -21,7 +21,13 @@ const salaryRangesList = [
   {salaryRangeId: '3000000', label: '30 LPA and above'},
   {salaryRangeId: '4000000', label: '40 LPA and above'},
 ]
-
+const locationTypeList = [
+  {locationId: 'Hyderabad', label: 'Hyderabad'},
+  {locationId: 'Bangalore', label: 'Bangalore'},
+  {locationId: 'Chennai', label: 'Chennai'},
+  {locationId: 'Delhi', label: 'Delhi'},
+  {locationId: 'Mumbai', label: 'Mumbai'},
+]
 const apiConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -36,6 +42,7 @@ class JobsSection extends Component {
     searchInput: '',
     activeSalaryRange: '',
     activeempType: [],
+    activeLocationtype: [],
   }
 
   componentDidMount = () => {
@@ -43,11 +50,17 @@ class JobsSection extends Component {
   }
 
   getJobDetails = async () => {
-    const {activeSalaryRange, activeempType, searchInput} = this.state
+    const {
+      activeSalaryRange,
+      activeempType,
+      searchInput,
+      activeLocationtype,
+    } = this.state
     const empTypes = activeempType.join(',')
+    const locationTypes = activeLocationtype.join(',')
     this.setState({apiStatus: apiConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
-    const url = `https://apis.ccbp.in/jobs?employment_type=${empTypes}&minimum_package=${activeSalaryRange}&search=${searchInput}`
+    const url = `https://apis.ccbp.in/jobs?employment_type=${empTypes}&minimum_package=${activeSalaryRange}&location=${locationTypes}&search=${searchInput}`
     const options = {
       headers: {Authorization: `Bearer ${jwtToken}`},
       method: 'GET',
@@ -167,6 +180,20 @@ class JobsSection extends Component {
     this.setState({activeSalaryRange: id}, this.getJobDetails)
   }
 
+  changeActiveLocationType = id => {
+    this.setState(prevState => {
+      const {activeLocationtype} = prevState
+      if (activeLocationtype.includes(id)) {
+        return {
+          activeLocationtype: activeLocationtype.filter(
+            locationType => locationType !== id,
+          ),
+        }
+      }
+      return {activeLocationtype: [...activeLocationtype, id]}
+    }, this.getJobDetails)
+  }
+
   render() {
     const {activeSalaryRange, activeempType} = this.state
     return (
@@ -181,10 +208,12 @@ class JobsSection extends Component {
               <FiltersGroup
                 employmentTypesList={employmentTypesList}
                 salaryRangesList={salaryRangesList}
+                locationTypeList={locationTypeList}
                 activeSalaryRange={activeSalaryRange}
                 activeempType={activeempType}
                 changeActiveEmpType={this.changeActiveEmpType}
                 changeActiveSalaryRange={this.changeActiveSalaryRange}
+                changeActiveLocationType={this.changeActiveLocationType}
               />
             </div>
           </div>
