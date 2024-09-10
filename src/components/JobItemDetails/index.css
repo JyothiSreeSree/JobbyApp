@@ -1,0 +1,128 @@
+.jobDetailsContainer {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.jobDetailsContent {
+  color: #2c364c;
+}
+
+.jobTitle {
+  font-size: 36px;
+  color: #121212;
+}
+
+.companyLogo {
+  width: 100px;
+}
+
+.rating {
+  color: #475569;
+}
+
+.location,
+.employmentType,
+.packagePerAnnum {
+  color: #64748b;
+}
+
+.sectionHeading {
+  font-size: 24px;
+  color: #6366f1;
+  margin-top: 20px;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skillItem {
+  margin: 10px;
+  text-align: center;
+}
+
+.skillImage {
+  width: 50px;
+  height: 50px;
+}
+
+.skillName {
+  color: #475569;
+}
+
+/* Life at Company */
+.lifeAtCompanyDescription {
+  color: #475569;
+}
+
+.lifeAtCompanyImage {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Similar Jobs */
+.similarJobsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.similarJobItem {
+  width: 45%;
+  margin: 10px;
+}
+
+.similarJobCompanyLogo {
+  width: 50px;
+  height: 50px;
+}
+
+.failureContainer {
+  text-align: center;
+}
+
+.failureImage {
+  width: 200px;
+}
+
+.failureHeading {
+  color: #ff0b37;
+}
+
+.failureDescription {
+  color: #7e858e;
+}
+
+.retryButton {
+  background-color: #ff0b37;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .jobTitle {
+    font-size: 28px;
+  }
+
+  .sectionHeading {
+    font-size: 20px;
+  }
+
+  .similarJobItem {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobTitle {
+    font-size: 24px;
+  }
+
+  .sectionHeading {
+    font-size: 18px;
+  }
+}

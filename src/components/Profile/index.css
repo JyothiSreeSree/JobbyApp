@@ -1,0 +1,82 @@
+.profileFailureContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f5f9;
+}
+
+.retryButton {
+  padding: 10px 20px;
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.profileLoaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8fafc;
+}
+
+.profileSuccessContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.profileImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profileName {
+  font-size: 24px;
+  color: #272727;
+  margin-bottom: 10px;
+}
+
+.profileBio {
+  font-size: 16px;
+  color: #7e858e;
+}
+
+@media screen and (max-width: 768px) {
+  .profileImage {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profileName {
+    font-size: 20px;
+  }
+
+  .profileBio {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profileImage {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profileName {
+    font-size: 18px;
+  }
+
+  .profileBio {
+    font-size: 12px;
+  }
+}

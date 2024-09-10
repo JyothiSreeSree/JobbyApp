@@ -1,0 +1,107 @@
+.filtersGroupContainer {
+  padding: 20px;
+  background-color: #f8fafc;
+  color: #475569;
+}
+
+.salaryRangeContainer {
+  margin-bottom: 20px;
+}
+
+.salaryRangeHeading {
+  font-size: 20px;
+  color: #2c364c;
+}
+
+.salaryRangeList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.salaryRangeItem {
+  margin-bottom: 10px;
+}
+
+.salaryRangeInput {
+  margin-right: 8px;
+  accent-color: #4f46e5;
+}
+
+.salaryRangeLabel {
+  font-size: 16px;
+  color: #475569;
+}
+
+.employmentTypesContainer {
+  margin-bottom: 20px;
+}
+
+.employmentTypeHeading {
+  font-size: 20px;
+  color: #2c364c;
+}
+
+.employmentTypesList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.employmentTypeItem {
+  margin-bottom: 10px;
+}
+
+.employmentTypeInput {
+  margin-right: 8px;
+  accent-color: #6366f1;
+}
+
+.employmentTypeLabel {
+  font-size: 16px;
+  color: #475569;
+}
+
+@media (max-width: 768px) {
+  .filtersGroupContainer {
+    padding: 15px;
+  }
+
+  .salaryRangeHeading,
+  .employmentTypeHeading {
+    font-size: 18px;
+  }
+
+  .salaryRangeLabel,
+  .employmentTypeLabel {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filtersGroupContainer {
+    padding: 10px;
+  }
+
+  .salaryRangeHeading,
+  .employmentTypeHeading {
+    font-size: 16px;
+  }
+
+  .salaryRangeLabel,
+  .employmentTypeLabel {
+    font-size: 12px;
+  }
+}
+
+.filtersGroupContainer {
+  background-color: #f1f5f9;
+}
+
+.salaryRangeLabel,
+.employmentTypeLabel {
+  color: #64748b;
+}
+
+.salaryRangeInput:checked + label,
+.employmentTypeInput:checked + label {
+  color: #ff0b37;
+}

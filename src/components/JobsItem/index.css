@@ -1,0 +1,59 @@
+.linkItem {
+  text-decoration: none;
+  color: inherit;
+}
+.jobImage {
+  width: 80px;
+}
+.image {
+  display: flex;
+  flex-direction: row;
+}
+.jobListItem {
+  background-color: #272727;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.jobTitle {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.jobLocation,
+.jobEmploymentType,
+.jobPackage {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.jobDescriptionTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.jobDescription {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .jobListItem {
+    padding: 15px;
+  }
+
+  .jobTitle {
+    font-size: 18px;
+  }
+
+  .jobDescriptionTitle {
+    font-size: 16px;
+  }
+}
